@@ -18,15 +18,15 @@ var solution = function(isBadVersion) {
      * @return {integer} The first bad version
      */
     return function(n) {
-      let low = 1, high = n;
-      while( low < high) {
-        const mid = low + Math.floor((high - low) / 2);       
+      let left = 1, right = n;
+      while( left < right) {
+        const mid = left + Math.floor((right - left) / 2);       
         if(isBadVersion(mid)) {
-          high = mid
+          right = mid
         } else {
-          low = mid + 1
+          left = mid + 1
         }
       }
-      return low;
+      return left;
     };
 };
