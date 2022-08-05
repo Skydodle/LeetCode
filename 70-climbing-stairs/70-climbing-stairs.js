@@ -11,6 +11,7 @@ var climbStairs = function(n) {
   let first = 1;
   let second = 2;
   
+  // fibonacci seq; sum = fib(n-1) + fib(n-2)
   for (let i = 3; i <= n; i++) {
     let third = first + second;
     first = second;
