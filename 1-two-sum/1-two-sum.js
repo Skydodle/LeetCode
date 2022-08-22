@@ -4,16 +4,14 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  // outer loop to loop thru current number
-  for ( var i = 0 ; i < nums.length; i++) {
-    // inner loop to loop thru the rest of array
-    for ( var j = 0; j < nums.length; j++) {
-      // make sure we are not comparing number at same index
-      // if current number + current next number equals target  
-      if (i !== j && nums[i] + nums[j] === target) {
-          // return an array containing current index and current next index
-          return [i, j];
+  if (nums.length === 2) {
+    return [0, 1]
+  }
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = i+1 ; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target ) {
+        return [i, j]
       }
     }
-  }
+  } 
 };
