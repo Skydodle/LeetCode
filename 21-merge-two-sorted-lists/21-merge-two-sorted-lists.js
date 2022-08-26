@@ -36,7 +36,8 @@ var mergeTwoLists = function(list1, list2) {
 
   // if list1 has run out of elements
   if (list1 === null) {
-      newList.next = list2;
+    // append list2 to the new list  
+    newList.next = list2;
   }
   // if list2 has run out of elements
   else {
