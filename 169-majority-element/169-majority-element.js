@@ -18,7 +18,5 @@ var majorityElement = function(nums) {
       majorEle = nums[i]
       return majorEle;
     }
-
-  }
-  
+  } 
 };
