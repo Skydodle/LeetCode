@@ -47,8 +47,10 @@ var containsDuplicate = function (nums) {
   for (var i = 0 ; i < nums.length; i++) {
       if (container[nums[i]]) {
           return true;
-      }
+      } else {
       container[nums[i]] = true;
+        
+      }
   }
   return false;
 }
