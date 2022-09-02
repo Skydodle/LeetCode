@@ -23,6 +23,6 @@ var twoSum = function(nums, target) {
       return [i, hashTable[complement]];
     }
     hashTable[nums[i]] = i;
-  }
-
+  };
+  return null;
 }
