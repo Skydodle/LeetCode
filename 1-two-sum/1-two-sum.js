@@ -12,6 +12,7 @@
 //       }
 //     }
 // };
+// T: O(n²) S: O(1)
 
 var twoSum = function(nums, target) {
   const hashTable = {};
@@ -26,3 +27,4 @@ var twoSum = function(nums, target) {
   };
   return null;
 }
+// T: O(N) S: O(N)
