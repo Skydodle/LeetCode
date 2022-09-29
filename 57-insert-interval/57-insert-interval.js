@@ -1,33 +1,24 @@
-/**
- * @param {number[][]} intervals
- * @param {number[]} newInterval
- * @return {number[][]}
- */
-var insert = function(intervals, newInterval) {
-  const result = [];
-  for (let i = 0; i < intervals.length; i++) {
-        let interval = intervals[i];
-        
-        // If overlaps
-        if (Math.max(interval[0], newInterval[0]) <= Math.min(interval[1], newInterval[1])) {
-            newInterval = [Math.min(interval[0], newInterval[0]), Math.max(interval[1], newInterval[1])];
-            continue;
-        }
-        
-        // If lower
-        if (interval[0] > newInterval[1]) {
-            result.push(newInterval, ...intervals.slice(i));
-            return result;
-        }
-        
-        result.push(interval);
+// O(n), O(n)
+var insert = function (intervals, newInterval) {
+  let [start, end] = newInterval;
+  let left = [];
+  let right = [];
+  
+  for (const interval of intervals) {
+    const [first, last] = interval;
+	
+	// current interval is smaller than newInterval
+    if (last < start) left.push(interval);
+	
+	// current interval is larger than newInterval
+    else if (first > end) right.push(interval);
+	
+	// there is a overlap
+    else {
+      start = Math.min(start, first);
+      end = Math.max(end, last);
     }
-    
-    result.push(newInterval);
-    return result;
+  }
+  
+  return [...left, [start, end], ...right]; 
 };
-
-// I - array of arrays
-// O - array of arrays
-// C - intervals sorted by start, in ascending order
-// E - 
