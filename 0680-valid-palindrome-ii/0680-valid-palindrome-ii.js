@@ -1,0 +1,52 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ // time O(N^2)
+// var validPalindrome = function(s) {
+//     if (s.length === 1) return false;
+
+//     function isPalindrome(str) {
+//         let reversed = str.split('').reverse().join('');
+
+//         return reversed === str;
+//     }
+
+//     if (isPalindrome(s)) return true;
+
+//     for (let front = 0, end = s.length - 1; front < end;) {
+
+//         let strF = s.slice(0, front) + s.slice(front + 1);
+//         let strE = s.slice(0, end) + s.slice(end + 1);
+//         if (s[front] === s[end]){
+//             front++;
+//             end--;
+//         } else if (isPalindrome(strF) || isPalindrome(strE)) {
+//             return true;
+//         } else {
+//             return false;
+//         } 
+//     }
+// };
+
+
+var validPalindrome = function(s) {
+    let low = 0, high = s.length-1;
+    while (low < high) {
+        if (s[low] !== s[high]) {
+            return isPalindrome(s, low+1, high) || isPalindrome(s, low, high-1);
+        }
+        low++, high--;
+    }
+    return true;
+    // T.C: O(N)
+    // S.C: O(1)
+};
+
+function isPalindrome(str, low, high) {
+    while (low < high) {
+        if (str[low] !== str[high]) return false;
+        low++, high--;
+    }
+    return true;
+}
