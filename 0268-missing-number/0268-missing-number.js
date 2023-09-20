@@ -6,8 +6,7 @@ var missingNumber = function(nums) {
     let n = nums.length;
 
     // sum = 3 + 2 + 1 + 0 = 6
-    // 3 + 0 + 1 = 4
-
+    // missing sum = 3 + 0 + 1 = 4
     // 6 - 4 = 2
 
     let sum = 0; 
@@ -21,4 +20,4 @@ var missingNumber = function(nums) {
     }
 
     return sum;
-};
+}; // Time: O(N) Space: O(1)
