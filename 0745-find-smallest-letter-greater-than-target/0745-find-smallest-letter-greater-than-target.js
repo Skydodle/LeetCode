@@ -21,8 +21,5 @@ var nextGreatestLetter = function(letters, target) {
             left = mid + 1;
         } 
     }
-
-    console.log(left, right)
-
     return letters[left];
 };
