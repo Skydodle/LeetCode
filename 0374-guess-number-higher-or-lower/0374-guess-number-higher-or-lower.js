@@ -21,10 +21,10 @@ var guessNumber = function(n) {
 
         if (clue === 0) {
             return mid;
-        } else if (clue === -1) {
-            right = mid - 1;
-        } else {
+        } else if (clue === 1) {
             left = mid + 1;
+        } else {
+            right = mid - 1;
         }
     }
 };
