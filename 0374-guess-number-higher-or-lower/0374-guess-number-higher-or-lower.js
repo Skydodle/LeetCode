@@ -23,7 +23,7 @@ var guessNumber = function(n) {
             return mid;
         } else if (clue === -1) {
             right = mid - 1;
-        } else if (clue === 1) {
+        } else {
             left = mid + 1;
         }
     }
