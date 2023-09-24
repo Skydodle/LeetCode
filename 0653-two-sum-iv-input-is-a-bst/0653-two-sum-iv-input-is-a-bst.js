@@ -23,8 +23,10 @@ var findTarget = function(root, k) {
         if (node.right) inorder(node.right);
     }
 
+    // plug in root to use the traversal
     inorder(root);
 
+    // two pointer iterate thru sorted list
     let start = 0;
     let end = inorderValues.length - 1;
 
