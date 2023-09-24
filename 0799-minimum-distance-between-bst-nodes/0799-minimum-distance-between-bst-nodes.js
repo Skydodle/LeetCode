@@ -11,6 +11,8 @@
  * @return {number}
  */
 
+
+// DFS In order
 var minDiffInBST = function(root) {
     let inorderValues = [];
     
@@ -32,3 +34,6 @@ var minDiffInBST = function(root) {
     
     return min;
 };
+
+// Time Complexity: O(n)
+// Space Complexity: O(n) (worst case), O(log n) (average case for a balanced BST)
