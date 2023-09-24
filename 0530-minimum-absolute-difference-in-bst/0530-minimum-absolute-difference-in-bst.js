@@ -31,3 +31,6 @@ var getMinimumDifference = function(root) {
 
     return min;
 };
+
+// Time: inorder traverse O(N) + for loop O(N) = O(2N) = O(N)
+// Space: recursion O(N) 
