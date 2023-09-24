@@ -23,7 +23,7 @@ var minDiffInBST = function(root) {
     }
     
     inorder(root);  // get the sorted list of BST values
-    console.log(inorderValues)
+    // console.log(inorderValues)
 
     let min = Number.MAX_SAFE_INTEGER;
     for (let i = 1; i < inorderValues.length; i++) {
