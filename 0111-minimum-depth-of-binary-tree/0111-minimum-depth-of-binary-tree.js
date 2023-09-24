@@ -10,13 +10,15 @@
  * @param {TreeNode} root
  * @return {number}
  */
+
+// DFS
 var minDepth = function(root) {
     // if node is null, add no depth
     if (!root) return 0;
 
     // if one side doesnt exist, check down other side and +1 for parent
-    if (!root.right) return 1+ + minDepth(root.left);
     if (!root.left) return 1 + minDepth(root.right);
+    if (!root.right) return 1+ + minDepth(root.left);
 
     // otherwise if both side exist, check down both and find minimum
     return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
