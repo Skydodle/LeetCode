@@ -35,7 +35,6 @@ var findTarget = function(root, k) {
         let large = inorderValues[end];
         let difference = k - small;
 
-
         if (large === difference) {
             return true;
         } else if (large > difference){
@@ -46,3 +45,6 @@ var findTarget = function(root, k) {
     }
     return false;
 };
+
+// Time: DFS O(N) + while loop O(N) = O(2N) = O(N)
+// Space: DFS stack O(N) + result array O(N) = O(2N) = O(N)
