@@ -21,7 +21,7 @@ var maxDepth = function(root) {
 
         while(depthLen--) {
             let node = queue.shift();
-            if (!node) return;
+  
             if (node.children) {
                 queue.push(...node.children)
             }
