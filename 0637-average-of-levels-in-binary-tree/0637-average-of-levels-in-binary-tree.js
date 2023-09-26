@@ -11,7 +11,6 @@
  * @return {number[]}
  */
 var averageOfLevels = function(root) {
-    let depth = 0;
     let queue = [root];
     let average =[];
 
@@ -21,7 +20,6 @@ var averageOfLevels = function(root) {
 
         for (let i = 0; i < size; i++) {
             let currentNode = queue.shift();
-   
             sum += currentNode.val;
 
             if (currentNode.left) {
