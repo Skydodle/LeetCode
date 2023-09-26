@@ -17,9 +17,9 @@ var sumOfLeftLeaves = function(root) {
     while (queue.length){
         let node = queue.shift();
 
-        if (node.left) {
-            if (!node.left.left && !node.left.right) {
-                sum += node.left.val;
+        if (node.left) { // if left child exist
+            if (!node.left.left && !node.left.right) { // and its a leaf
+                sum += node.left.val; // add leaf node val to sum
             } else {
                 queue.push(node.left);
             }
