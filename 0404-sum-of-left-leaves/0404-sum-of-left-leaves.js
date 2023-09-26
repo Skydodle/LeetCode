@@ -27,9 +27,8 @@ var sumOfLeftLeaves = function(root) {
         }
 
         if (node.right) {
-            queue.push(node.right);
+            queue.push(node.right); // so we can check right child's left children
         }
     }
-
     return sum;
 };
