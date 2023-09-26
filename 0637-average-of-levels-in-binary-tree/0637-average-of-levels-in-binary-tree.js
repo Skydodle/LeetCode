@@ -34,3 +34,5 @@ var averageOfLevels = function(root) {
     }
     return average; 
 };
+// Time: O(N)
+// SPce: O(N)
