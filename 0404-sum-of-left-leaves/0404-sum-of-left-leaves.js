@@ -11,6 +11,7 @@
  * @return {number}
  */
 var sumOfLeftLeaves = function(root) {
+    if (!root.left && !root.right) return 0;
     let sum = 0;
     let queue = [root];
 
