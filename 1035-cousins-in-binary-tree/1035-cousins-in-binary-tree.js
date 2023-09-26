@@ -1,57 +1,49 @@
 /**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
  * @param {TreeNode} root
  * @param {number} x
  * @param {number} y
  * @return {boolean}
  */
 
-//DFS
-const isCousins = (root, x, y) => {
+// BFS
+var isCousins = function(root, x, y) {
     let queue = [root];
-    while(queue.length) {
-        let len = queue.length;
-        let temp = [];
-        console.log('queue:',queue, 'len:', len)
-        while (len--) {
+
+    while (queue.length) {
+        let depthLen = queue.length;
+        let depthVals = [];
+
+        while(depthLen--) {
             let node = queue.shift();
-            if (node.left && node.right && ((node.left.val === x && node.right.val === y) || (node.left.val === y && node.right.val === x))) {
-                return false;
+
+            // if node has both childs 
+            if (node.left && node.right) {
+                // and the childs are x & y, they are siblings, return false
+                if (
+                    (node.left.val === x && node.right.val === y) ||
+                    (node.left.val === y && node.right.val === x)
+                ) {
+                    return false;
+                }
             }
+
+            // else just push childs to queue
             if (node.left) queue.push(node.left);
             if (node.right) queue.push(node.right);
-            temp.push(node.val);
-            console.log('temp:',temp);
+
+            // add current node's val to current depth's array
+            depthVals.push(node.val);
         }
-            if(temp.includes(x) && temp.includes(y)) return true;
+        // if current depth has both x & y and we already know they are not siblings from line 30
+        if (depthVals.includes(x) && depthVals.includes(y)) return true;
     }
     return false;
 };
-
-// BFS 
-// var isCousins = function(root, x, y) {
-//   const queue = [root];
-//   while (queue.length) {
-//     const size = queue.length;
-//     let foundX = false;
-//     let foundY = false;
-//     // iterate through one level
-//     for (let i = 0; i < size; i++) {
-//       const node = queue.shift();
-//       // check if children are x and y
-//       if (node.left && node.right) {
-//         if (
-//           (node.left.val === x && node.right.val === y) ||
-//           (node.left.val === y && node.right.val === x)
-//         )
-//           return false;
-//       }
-//       // find x and y at the same level
-//       if (node.val === x) foundX = true;
-//       if (node.val === y) foundY = true;
-//       if (node.left) queue.push(node.left);
-//       if (node.right) queue.push(node.right);
-//     }
-//     if (foundX && foundY) return true;
-//   }
-//   return false;
-// };
