@@ -19,4 +19,6 @@ var moveZeroes = function(nums) {
 // idx.  0 1 2 3 4
 // nums [0,1,0,3,12]
 //       1 3 12
-   
+
+// Time: O(N)
+// Space: O(1)
