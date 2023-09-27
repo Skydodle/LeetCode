@@ -18,3 +18,6 @@ var gcdOfStrings = function(str1, str2) {
 
   return str1.slice(0, length)
 };
+
+// Time: str concat O(M+N), Euclidean algo O(log(min)) = O(M+N)
+// Space: O(1)
