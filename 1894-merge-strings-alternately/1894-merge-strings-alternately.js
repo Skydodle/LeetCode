@@ -13,3 +13,6 @@ var mergeAlternately = function(word1, word2) {
 
     return merged.join('');
 };
+
+// Time: for loop O(N)
+// Space: result string O(M + N)
