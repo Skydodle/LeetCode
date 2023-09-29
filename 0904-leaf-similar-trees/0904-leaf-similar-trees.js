@@ -31,3 +31,6 @@ var leafSimilar = function(root1, root2) {
 
   return leafs1.toString() === leafs2.toString(); // cant compare arrays directly
 };
+
+// Time: O(M + N) number of nodes in trees
+// Space O(L1 + L2) number of leaf nodes in trees
