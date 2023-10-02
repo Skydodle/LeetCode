@@ -16,7 +16,7 @@ var checkAlmostEquivalent = function(word1, word2) {
         let difference = 0;
         if (word2Map.hasOwnProperty(key)){
             difference += Math.abs(word1Map[key] - word2Map[key]);
-            console.log('dif', difference)
+
         } else {
             difference += word1Map[key];
         }
@@ -27,7 +27,7 @@ var checkAlmostEquivalent = function(word1, word2) {
         let difference = 0;
         if (word1Map.hasOwnProperty(key)){
             difference += Math.abs(word1Map[key] - word2Map[key]);
-            console.log('dif', difference)
+  
         } else {
             difference += word2Map[key];
         }
