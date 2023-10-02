@@ -27,7 +27,7 @@ var isPalindrome = function(head) {
         prev = slow;
         slow = nextNode;
     }
-    
+
     // Compare the first half and the reversed second half
     slow = prev; // Reset slow to the beginning of the reversed list
     fast = head;
