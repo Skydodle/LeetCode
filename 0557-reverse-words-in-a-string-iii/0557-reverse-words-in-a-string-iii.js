@@ -18,3 +18,12 @@ var reverseWords = function(s) {
 
     return storeArr.join(' ')
 };
+// Time: split + nested loop (same variable) = O(N)
+// Space: words + storArr = O(N)
+
+// concise solution same performance
+// var reverseWords = function(s) {
+//     return s.split(' ')
+//             .map(word => word.split('').reverse().join(''))
+//             .join(' ');
+// };
