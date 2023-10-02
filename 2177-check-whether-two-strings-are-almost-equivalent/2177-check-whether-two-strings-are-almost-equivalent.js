@@ -19,7 +19,6 @@ var checkAlmostEquivalent = function(word1, word2) {
             word2Map[word2[i]]++;
         }
     }
-    console.log(word1Map, word2Map)
     
     for (let key in word1Map) {
         let difference = 0;
