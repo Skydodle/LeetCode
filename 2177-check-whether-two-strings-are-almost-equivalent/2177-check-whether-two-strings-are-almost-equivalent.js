@@ -8,16 +8,8 @@ var checkAlmostEquivalent = function(word1, word2) {
     let word2Map = {};
 
     for (let i = 0; i < word1.length; i++) {
-        if (!word1Map[word1[i]]) {
-            word1Map[word1[i]] = 1
-        } else {
-            word1Map[word1[i]]++;
-        }
-        if (!word2Map[word2[i]]) {
-            word2Map[word2[i]] = 1
-        } else {
-            word2Map[word2[i]]++;
-        }
+        word1Map[word1[i]] = (word1Map[word1[i]] || 0) + 1;
+        word2Map[word2[i]] = (word2Map[word2[i]] || 0) + 1;
     }
     
     for (let key in word1Map) {
