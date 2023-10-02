@@ -15,7 +15,7 @@ var kWeakestRows = function(mat, k) {
             if (row[j] === 1) {
                 count++;
             } else {
-                break;
+                break; // quit this row on first 0
             }
         }
         soldiers.push(count);
