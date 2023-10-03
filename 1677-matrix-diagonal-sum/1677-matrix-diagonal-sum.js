@@ -3,13 +3,11 @@
  * @return {number}
  */
 var diagonalSum = function(mat) {
-    let seen = new Set();
     let sum = 0;
     let col = 0;
 
     for (let row = 0; row < mat.length; row++) {
         sum += mat[row][col];
-
         col++;
     }
 
