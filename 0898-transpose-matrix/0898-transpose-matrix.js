@@ -4,6 +4,7 @@
  */
 var transpose = function(matrix) {
     let flipped = Array(matrix[0].length).fill(null).map(() => []);
+    // result should have col length not row length
     
     for (let i = 0; i < matrix.length; i++) {
         let row =  matrix[i];
