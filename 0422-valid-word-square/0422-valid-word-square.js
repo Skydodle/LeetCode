@@ -4,9 +4,7 @@
  */
 var validWordSquare = function(words) {
 
-
     for (let row = 0; row < words.length; row++) {
-
         let column = '';
         
         for (let col = 0; col < words[row].length; col++) {
@@ -14,14 +12,14 @@ var validWordSquare = function(words) {
             column += words[col][row];
         }
         if (column !== words[row]) return false;
-        console.log(column)
+        // console.log(column)
     }
     return true;
 };
 // Time: O(M)
 // Space: O(1)
 
-[
-    "abc",
-    "b"
-    ]
+// [
+//     "abc",
+//     "b"
+//     ]
