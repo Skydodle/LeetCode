@@ -12,14 +12,9 @@ var validWordSquare = function(words) {
             column += words[col][row];
         }
         if (column !== words[row]) return false;
-        // console.log(column)
     }
     return true;
 };
 // Time: O(M)
 // Space: O(1)
 
-// [
-//     "abc",
-//     "b"
-//     ]
