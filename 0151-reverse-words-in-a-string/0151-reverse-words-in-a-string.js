@@ -11,7 +11,6 @@ var reverseWords = function(s) {
     const reverse = [];
     let word = '';
     for (let i = 0; i < s.length; i++) {
-    console.log(i, word)
         if (s[i] === ' ') {
             word && reverse.unshift(word);
             word = '';
