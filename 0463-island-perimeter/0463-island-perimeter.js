@@ -19,9 +19,10 @@ var islandPerimeter = function(grid) {
             }
         }
     }
-
     return perimeter;
 };
+// Time: O(row x col)
+// Space: O(1)
 
 // grid = [
 //     [0,1,0,0],
