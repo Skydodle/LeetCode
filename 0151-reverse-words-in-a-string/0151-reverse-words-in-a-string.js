@@ -20,4 +20,6 @@ var reverseWords = function(s) {
     }
     word && reverse.unshift(word);
     return reverse.join(' ')
-}
+} 
+// Time: O(n)
+// Space: O(n)
