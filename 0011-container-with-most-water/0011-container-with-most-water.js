@@ -22,6 +22,7 @@ var maxArea = function(height) {
 
 // height = [1,8,6,2,5,4,8,3,7]
 //           0 1 2 3 4 5 6 7 8
-
-//           (0,1).(1,8)
-//           (0,0) (0,1)
+//           L               R
+// calculate the current area with lower point value times number of x (indices)
+// compare it with max and set max to the larger area
+// move the pointer of the lower point
