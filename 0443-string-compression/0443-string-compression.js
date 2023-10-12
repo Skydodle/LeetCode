@@ -32,17 +32,21 @@ var compress = function(chars) {
 };
 
 
-// k = 1
-//                               k
+// k = 0
+//           k                    
 // chars = ["a","a","b","b","c","c","c"]
 // i         0.  1.  2.  3.  4.  5.  6
-//               x   x   x.  x.  x.  x
-// let base = chars[0]
-// if chars[i] !== base
-// base = char[i]
-// char[k] = count; k+2
+//           x.  x
+// newChars. a              
+// count     2
+// if chars[i] !== chars[i + 1]
+// chars[k] = chars[i]; k++;
+// if count > 1
+// chars[k] = count;
+// k++;
+// count = 1
 
 
-// if chars[i] == base
+// else if chars[i] === chars[i + 1]
 // count++
 
