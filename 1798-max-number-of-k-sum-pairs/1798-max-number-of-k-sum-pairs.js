@@ -4,7 +4,7 @@
  * @return {number}
  */
 var maxOperations = function(nums, k) {
-    let sortedNums = nums.sort((a, b) => a - b); // O (NlogN)
+    nums = nums.sort((a, b) => a - b); // O (NlogN)
     let count = 0;
 
     for (let left = 0 , right = nums.length - 1; left < right;) {
@@ -19,8 +19,6 @@ var maxOperations = function(nums, k) {
             right--;
         }
     }
-
-    console.log(sortedNums)
     return count;
 };
 
