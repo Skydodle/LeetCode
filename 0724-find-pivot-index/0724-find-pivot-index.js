@@ -26,8 +26,8 @@ var pivotIndex = function(nums) {
 
 // idx.    0 1. 2. 3. 4. 5
 // nums = [1,7, 3, 6, 5, 6]
-// left.   0 1  8  11
-// right           11 6  0
+// left.   0 1  8  11 17 22
+// right  27 20 17 11 6  0
 
 // nums = [2,1,-1]
 //         0 2 3
