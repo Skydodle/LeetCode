@@ -14,7 +14,6 @@ var longestSubarray = function(nums) {
             if (nums[start] === 0) count--;
             start++;
         }
-
         max = Math.max(max, i - start);
     }
 
